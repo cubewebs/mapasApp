@@ -1,0 +1,11 @@
+
+.row {
+  width: 30rem;
+  background-color: white;
+  border-radius: 5px;
+  bottom: 50px;
+  left: 50px;
+  padding: 10px;
+  position: fixed;
+  z-index: 999;
+}  

@@ -9,7 +9,7 @@ const routes: Routes = [
 	{
 		path:'',
 		children: [
-			{ path: 'fullScreen', component: FullScreenComponent},
+			{ path: 'fullscreen', component: FullScreenComponent},
 			{ path: 'zoom-range', component: ZoomRangeComponent},
 			{ path: 'marcadores', component: MarcadoresComponent},
 			{ path: 'propiedades', component: PropiedaadesComponent},
