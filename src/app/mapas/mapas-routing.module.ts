@@ -6,20 +6,21 @@ import { MarcadoresComponent } from './pages/marcadores/marcadores.component';
 import { PropiedaadesComponent } from './pages/propiedaades/propiedaades.component';
 
 const routes: Routes = [
-	{
-		path:'',
-		children: [
-			{ path: 'fullscreen', component: FullScreenComponent},
-			{ path: 'zoom-range', component: ZoomRangeComponent},
-			{ path: 'marcadores', component: MarcadoresComponent},
-			{ path: 'propiedades', component: PropiedaadesComponent},
-			{ path: '**', redirectTo: 'fullScreen'},
-		]
-	}
+  {
+    path: '',
+    children: [
+      { path: 'fullscreen', component: FullScreenComponent },
+      { path: 'zoom-range', component: ZoomRangeComponent },
+      { path: 'marcadores', component: MarcadoresComponent },
+      { path: 'propiedades', component: PropiedaadesComponent },
+      { path: '', redirectTo: 'fullscreen', pathMatch: 'full' },
+      { path: '**', redirectTo: 'fullScreen', pathMatch: 'full' },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class MapasRoutingModule { }
+export class MapasRoutingModule {}
